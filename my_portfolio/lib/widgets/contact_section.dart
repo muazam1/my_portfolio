@@ -3,7 +3,8 @@ import 'package:my_portfolio/constants/size.dart';
 
 import '../constants/colors.dart';
 import 'custom_text_field.dart';
-import 'dart:js' as js;
+// ignore: avoid_web_libraries_in_flutter
+import "dart:js" as js;
 class ContactSection extends StatelessWidget {
   const ContactSection({super.key});
 
@@ -39,7 +40,7 @@ class ContactSection extends StatelessWidget {
             constraints: const BoxConstraints(
               maxWidth: 700,
             ),
-            child: CustomTextField(
+            child:const CustomTextField(
               hintText: "Your Message",
               maxLine: 16,
             ),
@@ -116,7 +117,7 @@ class ContactSection extends StatelessWidget {
     );
   }
   Row buildNameEmailTextFieldDesktop (){
-    return Row(
+    return const Row(
       children: [
         //Name
         Flexible(
@@ -134,7 +135,7 @@ class ContactSection extends StatelessWidget {
     );
   }
    Column buildNameEmailTextFieldMobile (){
-    return Column(
+    return const Column(
       children: [
         //Name
         Flexible(

@@ -10,9 +10,6 @@ final ProjectUtils project;
 
   @override
   Widget build(BuildContext context) {
-    final screenSize = MediaQuery.of(context).size;
-    final screenWidth = screenSize.width;
-    final screenHeight = screenSize.height;
     return Container(
             clipBehavior: Clip.antiAlias,
             height: 290,
@@ -28,7 +25,7 @@ final ProjectUtils project;
 //Title
                  Padding(
                   padding: const EdgeInsets.fromLTRB(12,15,12,12),
-                  child: Text(project.title,style: TextStyle(
+                  child: Text(project.title,style:const TextStyle(
                     fontWeight: FontWeight.w600,
                     color: CustomColors.whitePrimary,
                   ),),
@@ -37,7 +34,7 @@ final ProjectUtils project;
                 Padding(
                   padding: const EdgeInsets.fromLTRB(12, 0, 12, 12),
                   child: Text(
-                    project.subtitle,style: TextStyle(
+                    project.subtitle,style:const TextStyle(
                     fontSize: 12,
                     color: CustomColors.whiteSecondary,
                   ),),

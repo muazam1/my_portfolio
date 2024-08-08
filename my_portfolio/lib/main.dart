@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:my_portfolio/widgets/education_section.dart';
-
 import 'pages/home_page.dart';
 
 void main() {

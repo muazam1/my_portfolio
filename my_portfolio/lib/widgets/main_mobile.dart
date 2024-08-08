@@ -14,42 +14,33 @@ class MainMobile extends StatelessWidget {
       margin: const EdgeInsets.symmetric(horizontal: 40,vertical: 30),
       height: screenHeight,
       constraints:const BoxConstraints(
-        minHeight: 650.0,
+        minHeight: 750.0,
       ),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          ShaderMask(
-            shaderCallback: (bounds){
-              return  LinearGradient(colors: [
-                CustomColors.scaffoldBg.withOpacity(0.6),
-                CustomColors.scaffoldBg.withOpacity(0.6),
-              ]).createShader(bounds);
-            },
-            blendMode: BlendMode.srcATop,
-            child: Image.asset(
+           Image.asset(
               "assets/pic.png",
               width: screenWidth,
               height: 400,
             ),
-          ),
           const SizedBox(height: 30,),
-          const Text("Hi\nI'm Muazam Qayyum\nA Flutter Developer",
-            style:  TextStyle(
-                height: 1.5,
-                fontSize: 24,fontWeight: FontWeight.bold,color: CustomColors.whitePrimary),),
+          Container(
+            width: screenWidth,
+            child: const Text("Hi\nI'm Muazam Qayyum\nA Flutter Developer",
+              style:  TextStyle(
+                  height: 1.5,
+                  fontSize: 24,fontWeight: FontWeight.bold,color: CustomColors.whitePrimary),),
+          ),
           const SizedBox(height: 15,),
           SizedBox(
-            width: 190,
+            width: 180,
             height: 60,
             child: ElevatedButton(
-              style:const ButtonStyle(
-                backgroundColor: WidgetStateColor.transparent,
-
-              ),
+              style: ElevatedButton.styleFrom(backgroundColor: CustomColors.yellowPrimary),
               onPressed: (){},
-              child:const Text("Get in Touch"),),
+              child:const Text("Get in Touch",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold,color: CustomColors.whitePrimary),),),
 
           )],
       ),
